@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offer Proposal 1</title>
+    <script src="https://kit.fontawesome.com/cff6d6ecd6.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* OFFER */
+        .offer{
+            background: orange;
+            width: 100%;
+            height: 200vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container-offer-custom{
+            width: 90%;
+            margin: 0 auto;
+           
+        }
+        .row-offer-custom{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+        .card-offer{
+            background: white;
+            width: 25%;
+            height: auto;
+            border: 1px solid gray;
+           /*  border-radius: 10px !important; */
+            margin: 10px;
+            font-family: 'Open Sans', sans-serif;
+            transform: translate(0);
+            z-index: 1000 !important;
+            
+            
+        }
+        .box-image{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            z-index: 1000 !important;
+        }
+        .box-image img{
+            width: 70%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .card-header h4{
+            text-align: center;
+            font-size: 1.6rem;
+        }
+        .card-body{
+            background: white;
+            padding: 20px;
+            box-sizing: border-box;
+          position: absolute;
+        /*   top: 0px; */
+         height: 0;
+       
+         /*  transform: translateY(-120%); */
+        /* display: none;
+         z-index: 1; */
+        opacity: 0;
+     
+         z-index: 1;
+        }
+        .pie{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: gray;
+            padding: 20px 0;
+            cursor: pointer;
+            /* border-radius: 0 0 10px 10px; */
+            z-index: 1000 !important;
+        }
+        .active{
+            transition: opacity 0.3s ease-in/*  Delay */;
+           opacity: 1;
+        
+     
+        
+
+      height: auto;
+  
+
+        }
+        /* Rebote */
+        
+        .pie.active{
+            border-radius: 0px !important;
+        }
+    </style>
+    
+</head>
+<body>
+   
+    <section class="offer">
+        <div class="container-offer-custom">
+            <div class="row-offer-custom">
+                <div class="card-offer">
+                    <div class="card-header">
+                        <h4>Offer 1 69,99&euro;</h4>
+                        <div class="box-image">
+                            <img src="assets/images/product-1.png" alt="">
+                        </div>
+                        <div class="pie">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="card-body">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque condimentum, nisi quis cursus gravida, lacus massa fringilla orci, ac placerat leo lectus non arcu. Vivamus accumsan enim at velit dapibus sodales. Morbi vitae purus consequat</p>
+                        </div>
+                    </div>
+                   
+                </div>
+                <div class="card-offer">
+                    <div class="card-header">
+                        <h4>Offer 2 89,99&euro;</h4>
+                        <div class="box-image">
+                            <img src="assets/images/product-2.png" alt="">
+                        </div>
+                        <div class="pie">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="card-body">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque condimentum, nisi quis cursus gravida, lacus massa fringilla orci, ac placerat leo lectus non arcu. Vivamus accumsan enim at velit dapibus sodales. Morbi vitae purus consequat</p>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="card-offer">
+                    <div class="card-header">
+                        <h4>Offer 3 100,99&euro;</h4>
+                        <div class="box-image">
+                            <img src="assets/images/product-3.png" alt="">
+                        </div>
+                        <div class="pie">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="card-body">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque condimentum, nisi quis cursus gravida, lacus massa fringilla orci, ac placerat leo lectus non arcu. Vivamus accumsan enim at velit dapibus sodales. Morbi vitae purus consequat</p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <script>
+        let pie = document.querySelectorAll('.pie');
+
+        for(let i=0; i < pie.length;i++){
+            pie[i].addEventListener('click', function(){
+                this.nextElementSibling.classList.toggle('active');
+    });
+}
+    </script>
+</body>
+</html>

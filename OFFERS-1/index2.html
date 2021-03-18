@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offer Proposal 1</title>
+    <script src="https://kit.fontawesome.com/cff6d6ecd6.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* OFFER */
+        .card{
+            background: black;
+            color: white;
+            width: 200px;
+            height: 100px;
+         
+        }
+        .pie{
+            background: gray;
+            width: 200px;
+            height: 50px;
+        }
+        .body{
+            background: red;
+            color: white;
+            width: 200px;
+            height: 300px;
+            transform: translateY(-10%);
+        }
+    </style>
+    
+</head>
+<body>
+   
+    <section class="offer">
+    <div class="card">
+        <h4>Titulo</h4>
+    </div>
+    <div class="pie">abrir</div>
+    <div class="body"><p>lomcnjsdcnjksdcnjdscnsdnc</p></div>
+    </section>
+    
+
+    <script>
+        let pie = document.querySelectorAll('.pie');
+
+        for(let i=0; i < pie.length;i++){
+            pie[i].addEventListener('click', function(){
+                this.nextElementSibling.classList.toggle('active');
+    });
+}
+    </script>
+</body>
+</html>
